@@ -76,6 +76,7 @@ docker run \
     -v $CONFIG_VOLUME:/root/.telegram-cli \
     --name=$CONTAINER_NAME \
     -it -d \
+    --log-driver json-file --log-opt max-size=10m \
     --restart unless-stopped \
     pataquets/telegram-cli
 
